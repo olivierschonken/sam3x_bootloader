@@ -272,32 +272,32 @@ endif
 
 ifeq "$(CFG)" "Release"
 clean:
-	-cs-rm -f $(OBJS)
-	-cs-rm -f $(PROJECT).elf
-	-cs-rm -f $(PROJECT).map
-	-cs-rm -f $(RELEASE)/$(PROJECT).bin
-	-cs-rm -f $(SRC:.c=.c.bak)
-	-cs-rm -f $(SRC:.c=.lst)
-	-cs-rm -f $(ASRC:.s=.s.bak)
-	-cs-rm -f $(ASRC:.s=.lst)
-	-cs-rm -fR .dep
-	-cs-rm -fR $(OUTDIR)
-	-cs-rm -fR $(LISTDIR)
-	-cs-rm -fR $(RELEASE)
+	-rm -rf $(OBJS)
+	-rm -f $(PROJECT).elf
+	-rm -f $(PROJECT).map
+	-rm -f $(RELEASE)/$(PROJECT).bin
+	-rm -f $(SRC:.c=.c.bak)
+	-rm -f $(SRC:.c=.lst)
+	-rm -f $(ASRC:.s=.s.bak)
+	-rm -f $(ASRC:.s=.lst)
+	-rm -rf .dep
+	-rm -rf $(OUTDIR)
+	-rm -rf $(LISTDIR)
+	-rm -rf $(RELEASE)
 endif
 
 ifeq "$(CFG)" "Debug"
 clean:
-	-cs-rm -f $(OBJS)
-	-cs-rm -f $(PROJECT).elf
-	-cs-rm -f $(PROJECT).map
-	-cs-rm -f $(SRC:.c=.c.bak)
-	-cs-rm -f $(SRC:.c=.lst)
-	-cs-rm -f $(ASRC:.s=.s.bak)
-	-cs-rm -f $(ASRC:.s=.lst)
-	-cs-rm -fR .dep
-	-cs-rm -fR $(OUTDIR)
-	-cs-rm -fR $(LISTDIR)
+	-rm -rf $(OBJS)
+	-rm -f $(PROJECT).elf
+	-rm -f $(PROJECT).map
+	-rm -f $(SRC:.c=.c.bak)
+	-rm -f $(SRC:.c=.lst)
+	-rm -f $(ASRC:.s=.s.bak)
+	-rm -f $(ASRC:.s=.lst)
+	-rm -rf .dep
+	-rm -rf $(OUTDIR)
+	-rm -rf $(LISTDIR)
 endif
 
 
